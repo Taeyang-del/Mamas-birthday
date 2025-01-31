@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<div id="loading-screen" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: lavender; z-index: 1000; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <h1>👋 Hello World!</h1>
+    <h2>This is My Mama's webpage</h2>
+    <p>Hop on this is going to be the best website ever!!!</p>
+</div>
+
+<script>
+    setTimeout(function() {
+        document.getElementById('loading-screen').style.display = 'none';
+    }, 3000);
+    // Check time every minute
+    setInterval(function() {
+        const now = new Date();
+        const hours = now.getHours();
+        
+        if (hours >= 23) {
+            document.body.innerHTML = '<div style="display: flex; justify-content: center; align-items: center; height: 100vh; background-color: black; color: white;"><h1>Time to rest! Good night! 😴</h1></div>';
+        }
+    }, 60000);
+    
+</script>
+<div id="nameModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 2000;"></div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness App</title>
+    <style>
+        body {
+            background-color: lavender;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+        h1 {
+            color: #4B0082;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #6A5ACD;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .video-container {
+            margin: 20px 0;
+        }
+        iframe {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+        }
+        li {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        input[type="text"] {
+            width: 60%;
+            padding: 5px;
+            margin-left: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .notes-container textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            resize: vertical;
+        }
+        .reset-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #6A5ACD;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .reset-button:hover {
+            background-color: #4B0082;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Your Wellness App</h1>
+        <h2 style="color: rgb(135, 135, 255);">Let's start the day with some positive affirmations!</h2>
+        <div class="affirmations">
+            <h2>Affirmations</h2>
+                <ul style="color: lavender;"></ul>
+                <li>I am worthy of love and respect.</li>
+                <li>I am in control of my thoughts and emotions.</li>
+                <li>I am grateful for the good things in my life.</li>
+                <li>I am constantly growing and improving.</li>
+                <li>I am deserving of success and happiness.</li>
+                <li>I am surrounded by positive and supportive people.</li>
+                <li>I am confident in my abilities.</li>
+                <li>I am at peace with my past and excited for my future.</li>
+                <li>I am healthy, wealthy, and wise.</li>
+                <li>I am capable of achieving my goals.</li>
+                <li>I radiate love and positivity.</li>
+                <li>I am a magnet for abundance and prosperity.</li>
+                <li>I am capable of facing any challenges that come my way.</li>
+                <li>I am growing at my own pace.</li>
+                <li>I am allowed to ask for what I need.</li>
+                <li>I am safe and surrounded by love and support.</li>
+                <li>I am worthy of all the good things life has to offer.</li>
+                <li>I am confident in my ability to make the right decisions.</li>
+                <li>I am deserving of rest and self-care.</li>
+                <li>I am proud of myself and all that I have accomplished.</li>
+                <li>I am capable of achieving my dreams.</li>
+                <li>I am loved and appreciated by those around me.</li>
+                <li>I am a work in progress, and that's okay.</li>
+                <li>I am allowed to set boundaries and say no.</li>
+                <li>I am grateful for the lessons that life has taught me.</li>
+                <li>I am open to new opportunities and experiences.</li>
+                <li>I am worthy of respect and kindness.</li>
+                <li>I am constantly learning and growing.</li>
+                <li>I am deserving of love and happiness.</li>
+                <li>I am in charge of my own happiness.</li>
+                <li>I am capable of overcoming any obstacles.</li>
+                <li>I am surrounded by love and positivity.</li>
+                <li>I am confident in my ability to succeed.</li>
+                <li>I am valued and helpful.</li>
+            </ul>
+        </div>
+        <div class="video-container">
+            <iframe width="966" height="543" src="https://www.youtube.com/embed/A0rvRF8BKGo" title="Affirmations for Health, Wealth, Happiness &quot;Healthy, Wealthy &amp; Wise&quot; 30 Day Program" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div class="video-container">
+            <h2>Affirmation Video 2</h2>
+            <iframe width="966" height="543" src="https://www.youtube.com/embed/maNr_0zK5VQ" title="LISTEN EVERY DAY! &quot;I AM&quot; affirmations for Success" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h2>Ophra Motivational Speech</h2>
+        </div>
+        <iframe width="966" height="543" src="https://www.youtube.com/embed/lRrZiiMT68g" title="WATCH THIS EVERY DAY - Motivational Speech By Oprah Winfrey [YOU NEED TO WATCH THIS]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h2>Bruné Brown The power of vulnerabilit</h2>
+        <iframe width="966" height="546" src="https://www.youtube.com/embed/iCvmsMzlF7o" title="The power of vulnerability | Brené Brown | TED" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h2>Daily Wellness Checklist</h2>
+        <ul>
+            <li><input type="checkbox"> Wake up</li>
+            <li><input type="checkbox"> Brush teeth</li>
+            <li><input type="checkbox"> Make bed</li>
+            <li><input type="checkbox"> Morning routine</li>
+            <li><input type="checkbox"> Morning affirmations</li>
+            <li><input type="checkbox"> Morning meditation</li>
+            <li><input type="checkbox"> Drink 8 glasses of water</li>
+            <li><input type="checkbox"> Exercise for 30 minutes</li>
+            <li><input type="checkbox"> Meditate for 10 minutes</li>
+            <li><input type="checkbox"> Eat 5 servings of fruits and vegetables</li>
+            <li><input type="checkbox"> Get 8 hours of sleep</li>
+            <li><input type="checkbox"> Practice gratitude</li>
+            <li><input type="checkbox"> Read for 20 minutes</li>
+            <li><input type="checkbox"> Journal for 10 minutes</li>
+            <li><input type="checkbox"> Evening routine</li>
+            <li><input type="checkbox"> Evening meditation</li>
+            <li><input type="checkbox"> Nightly affirmations</li>
+            <li><input type="checkbox"> Plan for tomorrow</li>
+            <li><input type="checkbox"> Wind down for bed</li>
+            <li><input type="checkbox"> Lights out</li>
+            <li><input type="checkbox"> Sleep</li>
+            <li><input type="checkbox"> Study for CPA exam</li>
+            <li><input type="checkbox"> Play with Taeyang</li>
+            <li><input type="checkbox"> Call Mom</li>
+            <li><input type="checkbox"> Call My papa</li>
+            <li><input type="checkbox"> Play with lena</li>
+            <li><input type="checkbox"> Play with my babies</li>
+            <li><input type="checkbox"> <input type="text" placeholder="Add your own item"></li>
+            <li><input type="checkbox"> <input type="text" placeholder="Add your own item"></li>
+            <li><input type="checkbox"> <input type="text" placeholder="Add your own item"></li>
+            <li><input type="checkbox"> <input type="text" placeholder="Add your own item"></li>
+            <li><input type="checkbox"> <input type="text" placeholder="Add your own item"></li>
+            <li><input type="checkbox"> <input type="text" placeholder="Add your own item"></li>
+            <li><input type="checkbox"> <input type="text" placeholder="Add your own item"></li>
+            <li><input type="checkbox"> <input type="text" placeholder="Add your own item"></li>
+            <li><input type="checkbox"> <input type="text" placeholder="Add your own item"></li>
+        </ul>
+
+        <button class="reset-button" onclick="resetChecklist()">Reset Checklist</button>
+
+        <div class="notes-container">
+            <h2>Notes</h2>
+            <textarea rows="10" placeholder="Write your notes here..."></textarea>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const notesTextarea = document.querySelector('.notes-container textarea');
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+            // Load saved notes and checkbox states from localStorage
+            const savedNotes = localStorage.getItem('wellnessNotes');
+            if (savedNotes) {
+                notesTextarea.value = savedNotes;
+            }
+
+            checkboxes.forEach((checkbox, index) => {
+                const savedState = localStorage.getItem(`checkbox${index}`);
+                if (savedState === 'true') {
+                    checkbox.checked = true;
+                }
+                checkbox.addEventListener('change', () => {
+                    localStorage.setItem(`checkbox${index}`, checkbox.checked);
+                });
+            });
+
+            // Save notes to localStorage on input
+            notesTextarea.addEventListener('input', () => {
+                localStorage.setItem('wellnessNotes', notesTextarea.value);
+            });
+        });
+
+        function resetChecklist() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach((checkbox, index) => {
+                checkbox.checked = false;
+                localStorage.removeItem(`checkbox${index}`);
+            });
+            alert('Checklist has been reset!');
+        }
+       
+
+    </script>
+</body>
+</html>
